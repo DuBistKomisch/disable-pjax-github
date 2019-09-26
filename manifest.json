@@ -1,0 +1,15 @@
+{
+  "author": "DuBistKomisch",
+  "description": "Disables the loading of pages on GitHub via PJAX (pushState + AJAX), which becomes slow and unreliable on larger pages. Links now work normally, loading a new page.",
+  "homepage_url": "https://github.com/DuBistKomisch/disable-pjax-github",
+  "manifest_version": 2,
+  "name": "Disable Pjax on GitHub",
+  "version": "1.0",
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.github.com/*"],
+      "js": ["disable-pjax.js"]
+    }
+  ]
+}
